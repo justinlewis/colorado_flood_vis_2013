@@ -1,5 +1,15 @@
-<!DOCTYPE html><meta charset="utf-8"></meta>
-<html>
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8"></meta>
+
+<link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet-0.4.5/leaflet.css"/>
+<!--<link rel="stylesheet" type="text/css" href="/tip-projects-map/css/tipmap.css" />-->
+
+<script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.4.5/leaflet.js"></script>
+
+<script src="station_points.js" ></script>
+
+
 
 <style>
 body {
@@ -9,19 +19,37 @@ h1 {
 	text-align: center;
 }
 .site-text {
-	font-size: 15px;
+	font-size: 20px;
 	text-align: center;
 }
 
 #chart-container {
-	width: 1700px;
-	height: 600px;
+	width: 1500px;
+	height: 300px;
+	padding: 5px;
+	margin-left: 0px;
+}
+
+#chart-container_2 {
+	width: 1500px;
+	height: 300px;
+	padding: 5px;
+	margin-left: 0px;
+}
+
+#chart-container_3 {
+	width: 1500px;
+	height: 300px;
 	padding: 5px;
 	margin-left: 0px;
 }
 
 .chart {
 	padding: 1px;
+	margin-left: 10px;
+	background-color: lightgrey;
+/*	display: block;
+	margin: auto;*/
 }
 
 .axis path {
@@ -37,7 +65,7 @@ h1 {
 }
 
 .bar {
-  fill: gray;
+  fill: steelblue;
 /*  stroke: white;*/
 }
 
@@ -68,22 +96,49 @@ div.tooltip {
   pointer-events: none;         
 }
 
-</style>
+#map {
+		width: 1400px;
+		height: 500px;		
+		margin-left: 15px;
+	}
+	
+.infoHeader {
+  		color: #3D3D3D;
+  		font-family:arial;
+  		font-size: 13pt;
+		} 
+		
+.infoContent {
+  		color: #525252;
+  		font-family:arial;
+  		font-size: 11pt;
+		} 
 
+</style>
+</head>
 <body>
 
-<h1>A Simple Visualisation of the 2013 Colorado Flood</h1>
+<h1>A Simple Visualization Of Selected Stream Measurements During The 2013 Colorado Flood</h1>
 
 <p class="site-text">
-	Created with D3.js to show the dramatic increase in river levels during the 2013 Colorado flood. <br>
+	Created with D3.js and Leaflet to show the dramatic increase in river levels during the 2013 Colorado flood. <br><br>
+	
+	Charts illustrate stream discharge over time.  Hover over the chart to get more info.<br>
+	The map shows the stream gauge locations with symbols sized relative to their peak discharge levels.<br><br>
+	
 	The data was collected with USGS stream gauges and downloaded from the USGS website: <br>
-	<i>http://waterdata.usgs.gov/co/nwis/uv/?site_no=06730500&PARAmeter_cd=00065,00060</i>
+	<i>http://waterdata.usgs.gov/co/nwis/current/?type=flow&group_key=basin_cd</i>
 </p>
 
 
 <br></br>
 
-<div id="chart-container"></div>
+<div>
+	<div id="chart-container"></div>
+	<div id="chart-container_2"></div>
+	<div id="chart-container_3"></div>
+	<div id="map"></div>
+</div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="http://d3js.org/d3.v3.min.js"></script>
@@ -91,10 +146,12 @@ div.tooltip {
 <script>
 
 var margin = {top: 20, right: 5, bottom: 70, left: 50},
-    width = 1700 - margin.left - margin.right,
-    height = 600 - margin.top - margin.bottom;
+    width = 1400 - margin.left - margin.right,
+    height = 300 - margin.top - margin.bottom;
 
-var formatPercent = d3.format("");
+//var formatPercent = d3.format("");
+
+var dateRange = ["2013-09-09 12:00", "2013-09-10 12:00", "2013-09-11 12:00", "2013-09-12 12:00", "2013-09-13 12:00", "2013-09-14 12:00", "2013-09-15 09:00"];
 
 var x = d3.scale.ordinal()
     .rangeRoundBands([0, width], .1);
@@ -104,7 +161,7 @@ var y = d3.scale.linear()
 
 var xAxis = d3.svg.axis()
     .scale(x)
-    .tickValues(["2013-09-09 12:00", "2013-09-10 12:00", "2013-09-11 12:00", "2013-09-12 12:00", "2013-09-13 12:00", "2013-09-14 12:00"])
+    .tickValues(dateRange)
     .orient("bottom");
 
 var yAxis = d3.svg.axis()
@@ -121,7 +178,7 @@ var svg = d3.select("#chart-container").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    .attr("transform", "translate(" + margin.left + "," + margin.top * 2 + ")");
     
 
 var dataParsed = [];
@@ -187,16 +244,287 @@ d3.json("boulder_creek_at_longmont.json",function(error,data){
 	                .duration(500)      
 	                .style("opacity", 0);   
 	        });
-		      	
-			
+		      				
 			svg.append("text")
 	        .attr("x", (width / 2))             
 	        .attr("y", 0 - (margin.top / 3))
 	        .attr("text-anchor", "middle")  
 	        .style("font-size", "19px") 
 	        .style("text-decoration", "underline")  
-	        .text("Boulder Creek Stream Flow During the 2013 Flood (Sep 9 - 14)");
-})	       
+	        .text("Boulder Creek (@ Longmont) Stream Flow During the 2013 Flood (Sep 9 - 14)");
+})	  
+
+
+////////////
+// Chart 2
+////////////
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .tickValues(dateRange)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+   // .tickFormat(formatPercent);
+
+var div = d3.select("#chart-container_2").append("div")   
+    .attr("class", "tooltip")               
+    .style("opacity", 0);
+
+var svg2 = d3.select("#chart-container_2").append("svg")
+	 .attr("class", "chart")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top * 2 + ")");
+    
+
+var dataParsed = [];
+
+d3.json("clearcreek_at_golden.json",function(error,data){
+	if (error) return console.warn(error);
+   dataParsed = data;
+    	
+		  x.domain(dataParsed.map(function(d) { return d.date; }));
+		  y.domain([0, d3.max(dataParsed, function(d) { return d.discharge_cfs *1 ;})]);
+		
+		  //// Adds X axis labels
+		  svg2.append("g")
+		      .attr("class", "x axis")
+		      .attr("transform", "translate(0," + height + ")")
+		      .call(xAxis)
+		      // Angles the x-axis labels
+		      .selectAll("text")  
+            .style("text-anchor", "end")
+				.style("font-size", "13px") 
+            .attr("dx", "-.2em")
+            .attr("dy", ".25em");
+            //.attr("transform", function(d) {return "rotate(-65)" });
+            
+		  //// Adds Y axis labels
+		  svg2.append("g")
+		      .attr("class", "y axis")
+		      .call(yAxis)
+		      .attr("transform", "translate(" + 1  + ",0)")
+		      .style("font-size", "13px") 
+		      //// Adds additional label for y-axis
+		      .append("text")
+		      .attr("transform", "rotate(-90)")
+		      .attr("y", 4)
+		      .attr("dy", ".71em")
+		      .style("text-anchor", "end")
+		      .style("font-size", "15px") 
+		      .text("H20 Discharge (CFS)");
+	
+		  //// Properties of the bars
+		  svg2.selectAll(".bar")
+		      .data(dataParsed)
+		      .enter().append("rect")
+		      .attr("class", "bar")
+		      .attr("x", function(d) { return x(d.date); })	      
+		      .attr("width", x.rangeBand())
+		      .transition().delay(function (d,i){ return i * 10;}).duration(10)
+ 				.attr("y", function(d) { return y(d.discharge_cfs); })
+		      .attr("height", function(d) { return height - y(d.discharge_cfs); });
+		   
+		   //// Add hover over events after transition completes
+		   svg2.selectAll(".bar")
+		   .on("mouseover", function(d) {      
+	            div.transition()        
+	                .duration(100)      
+	                .style("opacity", .9);      
+	            div .html("H20 Flow: " + d.discharge_cfs + " cfs" + "<br/>" + "H20 Level: " + d.height_ft + " ft" + "<br/>" + d.date)  
+	                .style("left", (d3.event.pageX) + "px")     
+	                .style("top", (d3.event.pageY - 28) + "px");    
+	            })                  
+	        .on("mouseout", function(d) {       
+	            div.transition()        
+	                .duration(500)      
+	                .style("opacity", 0);   
+	        });
+		      				
+			svg2.append("text")
+	        .attr("x", (width / 2))             
+	        .attr("y", 0 - (margin.top / 3))
+	        .attr("text-anchor", "middle")  
+	        .style("font-size", "19px") 
+	        .style("text-decoration", "underline")  
+	        .text("Clear Creek (@ Golden) Stream Flow During the 2013 Flood (Sep 9 - 14)");
+})	     
+
+
+////////////
+//// Chart 3
+////////////
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .tickValues(dateRange)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+   // .tickFormat(formatPercent);
+
+var div = d3.select("#chart-container_3").append("div")   
+    .attr("class", "tooltip")               
+    .style("opacity", 0);
+
+var svg3 = d3.select("#chart-container_3").append("svg")
+	 .attr("class", "chart")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top * 2 + ")");
+    
+
+var dataParsed = [];
+
+d3.json("bear_creek_at_evergreen.json",function(error,data){
+	if (error) return console.warn(error);
+   dataParsed = data;
+    	
+		  x.domain(dataParsed.map(function(d) { return d.date; }));
+		  y.domain([0, d3.max(dataParsed, function(d) { return d.discharge_cfs *1 ;})]);
+		
+		  //// Adds X axis labels
+		  svg3.append("g")
+		      .attr("class", "x axis")
+		      .attr("transform", "translate(0," + height + ")")
+		      .call(xAxis)
+		      // Angles the x-axis labels
+		      .selectAll("text")  
+            .style("text-anchor", "end")
+				.style("font-size", "13px") 
+            .attr("dx", "-.2em")
+            .attr("dy", ".25em");
+            //.attr("transform", function(d) {return "rotate(-65)" });
+            
+		  //// Adds Y axis labels
+		  svg3.append("g")
+		      .attr("class", "y axis")
+		      .call(yAxis)
+		      .attr("transform", "translate(" + 1  + ",0)")
+		      .style("font-size", "13px") 
+		      //// Adds additional label for y-axis
+		      .append("text")
+		      .attr("transform", "rotate(-90)")
+		      .attr("y", 4)
+		      .attr("dy", ".71em")
+		      .style("text-anchor", "end")
+		      .style("font-size", "15px") 
+		      .text("H20 Discharge (CFS)");
+	
+		  //// Properties of the bars
+		  svg3.selectAll(".bar")
+		      .data(dataParsed)
+		      .enter().append("rect")
+		      .attr("class", "bar")
+		      .attr("x", function(d) { return x(d.date); })	      
+		      .attr("width", x.rangeBand())
+		      .transition().delay(function (d,i){ return i * 10;}).duration(10)
+ 				.attr("y", function(d) { return y(d.discharge_cfs); })
+		      .attr("height", function(d) { return height - y(d.discharge_cfs); });
+		   
+		   //// Add hover over events after transition completes
+		   svg3.selectAll(".bar")
+		   .on("mouseover", function(d) {      
+	            div.transition()        
+	                .duration(100)      
+	                .style("opacity", .9);      
+	            div .html("H20 Flow: " + d.discharge_cfs + " cfs" + "<br/>" + "H20 Level: " + d.height_ft + " ft" + "<br/>" + d.date)  
+	                .style("left", (d3.event.pageX) + "px")     
+	                .style("top", (d3.event.pageY - 28) + "px");    
+	            })                  
+	        .on("mouseout", function(d) {       
+	            div.transition()        
+	                .duration(500)      
+	                .style("opacity", 0);   
+	        });
+		      				
+			svg3.append("text")
+	        .attr("x", (width / 2))             
+	        .attr("y", 0 - (margin.top / 3))
+	        .attr("text-anchor", "middle")  
+	        .style("font-size", "19px") 
+	        .style("text-decoration", "underline")  
+	        .text("Bear Creek (@ Evergreen) Stream Flow During the 2013 Flood (Sep 9 - 14)");
+})	     
+
+
+//////////
+//// Map
+//////////
+
+ 		var map, stationPoints;	
+		
+		var mapquestUrl = 'http://otile{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
+			mapquestAttribution = "Data CC-By-SA by <a href='http://openstreetmap.org/' target='_blank'>OpenStreetMap</a>, Tiles Courtesy of <a href='http://open.mapquest.com' target='_blank'>MapQuest</a>",
+			mapquest = new L.TileLayer(mapquestUrl, {maxZoom: 18, attribution: mapquestAttribution, subdomains: ['1','2','3','4']});
+		
+		
+		function onEachFeature(feature, layer) {
+    		if (feature.properties) {
+        	layer.bindPopup(
+        		'<div class="infoHeader">' + '<b>' + "Stream Gauge Locations" +'</b>' +
+				'</div><div class="infoContent">' + 'Site Name:  ' + '<b>' +feature.properties.sitename +'</b>' +
+				'</div><div class="infoContent">' + 'Max Discharge (cfs):  ' + '<b>' +feature.properties.maxflow +'</b>',
+				 {maxWidth: 400}
+				);
+    		}
+		}		
+		
+				
+			
+//		var stationStyle = {
+//    		radius: 20,
+//    		fillColor: "#0099FF",
+//   	   color: "#000",
+//    		weight: 1,
+//    		opacity: 1,
+//    		fillOpacity: 0.8
+//		};		
+	
+		//Simple add json points with popup & point styling
+		var stationPoints = new L.GeoJSON(points, {pointToLayer: function (feature, latlng) {
+			
+			// This is hackish.  Need a real algorithm.
+			currRadius = feature.properties.maxflow / 50;
+			
+			if (currRadius < 2) {
+				currRadius = 5;	
+			}
+
+        	return L.circleMarker(latlng, {radius: currRadius, fillColor: "#FF5C33",color: "#000",weight: 1,opacity: 1,fillOpacity: 0.8});
+			},
+			onEachFeature: onEachFeature
+		});  
+			
+		map = new L.Map('map', {
+			center: new L.LatLng(39.90, -464.97), 
+			zoom: 9,
+			zoomAnimation: false,
+			layers: [mapquest],
+			zoomControl: true
+		});
+		
+		map.addLayer(stationPoints);
+					
+			
+		// Builds the layer switcher
+		var baseMaps = {
+			"mapquest": mapquest
+			};
+			
+		var overlays = {
+			"Station Locations": stationPoints
+			}; 
+			
+		// adds the layer switcher control
+		map.addControl(new L.control.layers(baseMaps,overlays));
   
 </script>
 
