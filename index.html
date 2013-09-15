@@ -5,12 +5,19 @@
 body {
   font: 13px sans-serif;
 }
+h1 {
+	text-align: center;
+}
+.site-text {
+	font-size: 15px;
+	text-align: center;
+}
 
 #chart-container {
 	width: 1700px;
 	height: 600px;
 	padding: 5px;
-	margin-left: 50px;
+	margin-left: 0px;
 }
 
 .chart {
@@ -64,6 +71,17 @@ div.tooltip {
 </style>
 
 <body>
+
+<h1>A Simple Visualisation of the 2013 Colorado Flood</h1>
+
+<p class="site-text">
+	Created with D3.js to show the dramatic increase in river levels during the 2013 Colorado flood. <br>
+	The data was collected with USGS stream gauges and downloaded from the USGS website: <br>
+	<i>http://waterdata.usgs.gov/co/nwis/uv/?site_no=06730500&PARAmeter_cd=00065,00060</i>
+</p>
+
+
+<br></br>
 
 <div id="chart-container"></div>
 
@@ -177,9 +195,7 @@ d3.json("boulder_creek_at_longmont.json",function(error,data){
 	        .attr("text-anchor", "middle")  
 	        .style("font-size", "19px") 
 	        .style("text-decoration", "underline")  
-	        .text("Stream Flow Measurements for Boulder Creek at Longmont");
-	       
-
+	        .text("Boulder Creek Stream Flow During the 2013 Flood (Sep 9 - 14)");
 })	       
   
 </script>
