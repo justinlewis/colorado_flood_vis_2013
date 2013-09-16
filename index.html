@@ -28,6 +28,12 @@ h2 {
 	text-align: center;
 }
 
+.site-text-left {
+	font-size: 18px;
+	text-align: left;
+	margin-left: 5px;
+}
+
 .small-site-text {
 	font-size: 15px;
 	text-align: center;
@@ -151,21 +157,35 @@ div.tooltip {
 <body>
 
 <h1>A Simple Visualization Of Selected Stream Measurements During The 2013 Colorado Flood</h1>
-
-<p class="site-text">
-	Created with D3.js and Leaflet.js to show the dramatic increase in river levels during the 2013 Colorado flood. <br><br>
-	
-	Charts illustrate stream discharge over time.  Hover over the chart to get more info.<br>
-	The map shows stream gauge locations with symbols sized relative to their peak discharge levels.<br><br>
-	
-	Data was collected with USGS stream gauges and downloaded from the USGS website: <br>
-	<i>http://waterdata.usgs.gov/co/nwis/current/?type=flow&group_key=basin_cd</i>
-</p>
-
-
-<br></br>
+<h2>Created with D3.js and Leaflet.js to show the dramatic increase in river levels during the 2013 Colorado flood </h2>
+</br>
 
 <div id="container">
+	<p class="site-text-left">		
+		<b>The Charts:</b></br>
+		Charts illustrate stream discharge over time (Sep 9 - 15).  
+		Hover over the chart to get more discharge rates, water levels (ft), percent discharge above average, and the exact date/time.
+		</br></br>
+		
+		<b>The Map:</b></br>
+		The map shows stream gauge locations with symbols sized relative to their peak discharge levels.  
+		Click on a station symbol to see the max discharge for that site.
+		Some gauge locations where included (symbolized in black) that have incomplete data and so where excluded from the charts (more details below).
+		</br></br>
+		
+		<b>The Data:</b></br>
+		Data was collected with USGS stream gauges and downloaded from the USGS website. 
+		The effort focused on visualizing stream data for rivers that showed the highest increase in discharge.
+		Many stream gauges where destroyed in the flood on rivers with the highest discharge. 
+		Because of this the data was incomplete and so we chose not to display those charts. 
+		However, we included some of the destroyed gauge locations on the map (symbolized in black) with peak discharge values recorded before the gauge was destroyed.  </br>
+		<a href="http://waterdata.usgs.gov/co/nwis/current/?type=flow&group_key=basin_cd">USGS Stream Gauge Data Access</a>
+			</br></br>
+		
+		<b>Special Note:</b></br>
+		This was/is an entirely volunteer effort for the purpose of trying to better understand a natural disaster and get more familiar with d3.js. 
+		This is not endorsed by any agency. 
+	</p>
 	<div id="chart-container"></div>
 	<div id="chart-container_2"></div>
 	<div id="chart-container_3"></div>
@@ -272,8 +292,8 @@ d3.json("boulder_creek_at_longmont.json",function(error,data){
 	            div.transition()        
 	                .duration(100)      
 	                .style("opacity", .9);      
-	            div.html("H20 Flow: " + d.discharge_cfs + " cfs" + "<br/>" + 
-	            			"Flow Above Ave: " + Math.round(((d.discharge_cfs - 26) / 26) * 100) + " % (cfs)" + "<br/>" + 
+	            div.html("H20 Discharge: " + d.discharge_cfs + " cfs" + "<br/>" + 
+	            			"Discharge Above Ave: " + Math.round(((d.discharge_cfs - 26) / 26) * 100) + " % (cfs)" + "<br/>" + 
 	            			 "H20 Level: " + d.height_ft + " ft" + "<br/>" + 
 	            			 d.date)   
 	                .style("left", (d3.event.pageX) + "px")     
@@ -376,8 +396,8 @@ d3.json("southplatte_at_fortlupton.json",function(error,data){
 	            div.transition()        
 	                .duration(100)      
 	                .style("opacity", .9);      
-	            div.html("H20 Flow: " + d.discharge_cfs + " cfs" + "<br/>" + 
-	            			"Flow Above Ave: " + Math.round(((d.discharge_cfs - 220) / 220) * 100) + " % (cfs)" + "<br/>" + 
+	            div.html("H20 Discharge: " + d.discharge_cfs + " cfs" + "<br/>" + 
+	            			"Discharge Above Ave: " + Math.round(((d.discharge_cfs - 220) / 220) * 100) + " % (cfs)" + "<br/>" + 
 	            			 "H20 Level: " + d.height_ft + " ft" + "<br/>" + 
 	            			 d.date)  
 	                .style("left", (d3.event.pageX) + "px")     
@@ -479,8 +499,8 @@ d3.json("bigthompson_at_estespark.json",function(error,data){
 	            div.transition()        
 	                .duration(100)      
 	                .style("opacity", .9);      
-	            div.html("H20 Flow: " + d.discharge_cfs + " cfs" + "<br/>" + 
-	            			"Flow Above Ave: " + Math.round(((d.discharge_cfs - 26) / 26) * 100) + " % (cfs)" + "<br/>" + 
+	            div.html("H20 Discharge: " + d.discharge_cfs + " cfs" + "<br/>" + 
+	            			"Discharge Above Ave: " + Math.round(((d.discharge_cfs - 26) / 26) * 100) + " % (cfs)" + "<br/>" + 
 	            			 "H20 Level: " + d.height_ft + " ft" + "<br/>" + 
 	            			 d.date)  
 	                .style("left", (d3.event.pageX) + "px")     
@@ -582,8 +602,8 @@ d3.json("bear_creek_at_evergreen.json",function(error,data){
 	            div.transition()        
 	                .duration(100)      
 	                .style("opacity", .9);      
-	            div.html("H20 Flow: " + d.discharge_cfs + " cfs" + "<br/>" + 
-	            			"Flow Above Ave: " + Math.round(((d.discharge_cfs - 30) / 30) * 100) + " % (cfs)" + "<br/>" + 
+	            div.html("H20 Discharge: " + d.discharge_cfs + " cfs" + "<br/>" + 
+	            			"Discharge Above Ave: " + Math.round(((d.discharge_cfs - 30) / 30) * 100) + " % (cfs)" + "<br/>" + 
 	            			 "H20 Level: " + d.height_ft + " ft" + "<br/>" + 
 	            			 d.date)  
 	                .style("left", (d3.event.pageX) + "px")     
@@ -685,8 +705,8 @@ d3.json("clearcreek_at_golden.json",function(error,data){
 	            div.transition()        
 	                .duration(100)      
 	                .style("opacity", .9);      
-	            div.html("H20 Flow: " + d.discharge_cfs + " cfs" + "<br/>" + 
-	            			"Flow Above Ave: " + Math.round(((d.discharge_cfs - 123) / 123) * 100) + " % (cfs)" + "<br/>" + 
+	            div.html("H20 Discharge: " + d.discharge_cfs + " cfs" + "<br/>" + 
+	            			"Discharge Above Ave: " + Math.round(((d.discharge_cfs - 123) / 123) * 100) + " % (cfs)" + "<br/>" + 
 	            			 "H20 Level: " + d.height_ft + " ft" + "<br/>" + 
 	            			 d.date)  
 	                .style("left", (d3.event.pageX) + "px")     
