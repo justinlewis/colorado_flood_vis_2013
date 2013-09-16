@@ -4450,5 +4450,61 @@
 		"date": "2013-09-15 14:45",
 		"discharge_cfs": "277",
 		"height_ft": "5.55"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "402114105350101",
+		"date": "2013-09-15 15:00",
+		"discharge_cfs": "285",
+		"height_ft": "5.58"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "402114105350101",
+		"date": "2013-09-15 15:15",
+		"discharge_cfs": "288",
+		"height_ft": "5.59"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "402114105350101",
+		"date": "2013-09-15 15:30",
+		"discharge_cfs": "285",
+		"height_ft": "5.58"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "402114105350101",
+		"date": "2013-09-15 15:45",
+		"discharge_cfs": "288",
+		"height_ft": "5.59"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "402114105350101",
+		"date": "2013-09-15 16:00",
+		"discharge_cfs": "291",
+		"height_ft": "5.6"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "402114105350101",
+		"date": "2013-09-15 16:15",
+		"discharge_cfs": "294",
+		"height_ft": "5.61"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "402114105350101",
+		"date": "2013-09-15 16:30",
+		"discharge_cfs": "297",
+		"height_ft": "5.62"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "402114105350101",
+		"date": "2013-09-15 16:45",
+		"discharge_cfs": "291",
+		"height_ft": "5.6"
 	}
 ]
