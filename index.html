@@ -23,6 +23,10 @@ h2 {
 	text-align: center;
 }
 
+h3 {
+	text-align: center;
+}
+
 .site-text {
 	font-size: 20px;
 	text-align: center;
@@ -75,6 +79,20 @@ h2 {
 }
 
 #chart-container_5 {
+	width: 100%;
+	height: 300px;
+	padding: 5px;
+	margin-left: 0px;
+}
+
+#chart-container_6 {
+	width: 100%;
+	height: 300px;
+	padding: 5px;
+	margin-left: 0px;
+}
+
+#chart-container_7 {
 	width: 100%;
 	height: 300px;
 	padding: 5px;
@@ -144,6 +162,8 @@ div.tooltip {
   		color: #3D3D3D;
   		font-family:arial;
   		font-size: 13pt;
+  		text-align: center;
+  		text-decoration: underline;
 		} 
 		
 .infoContent {
@@ -152,12 +172,40 @@ div.tooltip {
   		font-size: 11pt;
 		} 
 
+.info-alert {
+	color: red;
+	font-family: arial;
+	font-size: 11pt;
+	}
+		
+#map-container	{
+	width: 100%;
+	height: 500px;
+	margin-left: 5px;
+}
+
+#info-box {
+	position: absolute;
+	margin-top: 390px;
+	margin-left: 15px;
+	background-color: white;
+	width: 340px;
+	height: 100px;
+	border-radius: 5px;
+	z-index: 1001;
+}
+
+#info-content {
+	padding: 5px;
+}
+
 </style>
 </head>
 <body>
 
 <h1>A Simple Visualization Of Selected Stream Measurements During The 2013 Colorado Flood</h1>
-<h2>Created with D3.js and Leaflet.js to show the dramatic increase in river levels during the 2013 Colorado flood </h2>
+<h2>Created with D3.js and Leaflet.js to show the dramatic increase in river levels during the 2013 Colorado flood. </h2>
+<h3>Created by Justin Lewis : @JMapping on Twitter</h3>
 </br>
 
 <div id="container">
@@ -191,9 +239,14 @@ div.tooltip {
 	<div id="chart-container_3"></div>
 	<div id="chart-container_4"></div>
 	<div id="chart-container_5"></div>
+	<div id="chart-container_6"></div>
+<!--	<div id="chart-container_7"></div>-->
 		<br></br>
 		<h2>Stream Gauge Locations and Max Discharge</h2>
-	<div id="map"></div>
+	<div id="map-container">
+	<div id="info-box"></div>
+		<div id="map"></div>		
+	</div>
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -201,531 +254,156 @@ div.tooltip {
 
 <script>
 
-var margin = {top: 20, right: 5, bottom: 70, left: 50},
-    width = 1500 - margin.left - margin.right,
-    height = 300 - margin.top - margin.bottom;
-
-//var formatPercent = d3.format("");
-
-var dateRange = ["2013-09-09 12:00", "2013-09-10 12:00", "2013-09-11 12:00", "2013-09-12 12:00", "2013-09-13 12:00", "2013-09-14 12:00", "2013-09-15 12:00"];
-var brokenDateRange = ["2013-09-09 12:00", "2013-09-10 12:00", "2013-09-11 12:00", "2013-09-12 12:00", "2013-09-12 18:00"];
-
-var x = d3.scale.ordinal()
-    .rangeRoundBands([0, width], .1);
-
-var y = d3.scale.linear()
-    .range([height, 0]);
-
-var xAxis = d3.svg.axis()
-    .scale(x)
-    .tickValues(dateRange)
-    .orient("bottom");
-
-var yAxis = d3.svg.axis()
-    .scale(y)
-    .orient("left");
-   // .tickFormat(formatPercent);
-   
-var div = d3.select("#chart-container").append("div")   
-    .attr("class", "tooltip")               
-    .style("opacity", 0);
-
-var svg = d3.select("#chart-container").append("svg")
-	 .attr("class", "chart")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top * 2 + ")");
-    
-
-var dataParsed = [];
-
-d3.json("boulder_creek_at_longmont.json",function(error,data){
-	if (error) return console.warn(error);
-   dataParsed = data;
-    	
-		  x.domain(dataParsed.map(function(d) { return d.date; }));
-		  y.domain([0, d3.max(dataParsed, function(d) { return d.discharge_cfs *1 ;})]);
-		
-		  //// Adds X axis labels
-		  svg.append("g")
-		      .attr("class", "x axis")
-		      .attr("transform", "translate(0," + height + ")")
-		      .call(xAxis)
-		      // Angles the x-axis labels
-		      .selectAll("text")  
-            .style("text-anchor", "end")
-				.style("font-size", "13px") 
-            .attr("dx", "-.2em")
-            .attr("dy", ".25em");
-            //.attr("transform", function(d) {return "rotate(-65)" });
-            
-		  //// Adds Y axis labels
-		  svg.append("g")
-		      .attr("class", "y axis")
-		      .call(yAxis)
-		      .attr("transform", "translate(" + 1  + ",0)")
-		      .style("font-size", "13px") 
-		      //// Adds additional label for y-axis
-		      .append("text")
-		      .attr("transform", "rotate(-90)")
-		      .attr("y", 4)
-		      .attr("dy", ".71em")
-		      .style("text-anchor", "end")
-		      .style("font-size", "13px") 
-		      .text("H20 Discharge (CFS)");
+function generateChart(fileName, containerDiv, chartTitle, dateRange, averageDischarge, transitionSpeed){
+	var margin = {top: 20, right: 5, bottom: 70, left: 50},
+	    width = 1500 - margin.left - margin.right,
+	    height = 300 - margin.top - margin.bottom;
 	
-		  //// Properties of the bars
-		  svg.selectAll(".bar")
-		      .data(dataParsed)
-		      .enter().append("rect")
-		      .attr("class", "bar")
-		      .attr("x", function(d) { return x(d.date); })	      
-		      .attr("width", x.rangeBand())
-		      .transition().delay(function (d,i){ return i * 10;}).duration(10)
- 				.attr("y", function(d) { return y(d.discharge_cfs); })
-		      .attr("height", function(d) { return height - y(d.discharge_cfs); });
-		   
-		   //// Add hover over events after transition completes
-		   svg.selectAll(".bar")
-		   .on("mouseover", function(d) {      
-	            div.transition()        
-	                .duration(100)      
-	                .style("opacity", .9);      
-	            div.html("H20 Discharge: " + d.discharge_cfs + " cfs" + "<br/>" + 
-	            			"Discharge Above Ave: " + Math.round(((d.discharge_cfs - 26) / 26) * 100) + " % (cfs)" + "<br/>" + 
-	            			 "H20 Level: " + d.height_ft + " ft" + "<br/>" + 
-	            			 d.date)   
-	                .style("left", (d3.event.pageX) + "px")     
-	                .style("top", (d3.event.pageY - 28) + "px");    
-	            })                  
-	        .on("mouseout", function(d) {       
-	            div.transition()        
-	                .duration(500)      
-	                .style("opacity", 0);   
-	        });
-		      				
-			svg.append("text")
-	        .attr("x", (width / 2))             
-	        .attr("y", 0 - (margin.top / 3))
-	        .attr("text-anchor", "middle")  
-	        .style("font-size", "19px") 
-	        .style("text-decoration", "underline")  
-	        .text("Boulder Creek (@ Longmont) Stream Flow During the 2013 Flood (Sep 9 - 15)");
-})	  
-
-
-////////////
-// Chart 2
-////////////
-
-
-var xAxis = d3.svg.axis()
-    .scale(x)
-    .tickValues(dateRange)
-    .orient("bottom");
-
-var yAxis = d3.svg.axis()
-    .scale(y)
-    .orient("left");
-   // .tickFormat(formatPercent);
-
-var div = d3.select("#chart-container_2").append("div")   
-    .attr("class", "tooltip")               
-    .style("opacity", 0);
-
-var svg2 = d3.select("#chart-container_2").append("svg")
-	 .attr("class", "chart")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top * 2 + ")");
-    
-
-var dataParsed = [];
-
-d3.json("southplatte_at_fortlupton.json",function(error,data){
-	if (error) return console.warn(error);
-   dataParsed = data;
-    	
-		  x.domain(dataParsed.map(function(d) { return d.date; }));
-		  y.domain([0, d3.max(dataParsed, function(d) { return d.discharge_cfs *1 ;})]);
-		
-		  //// Adds X axis labels
-		  svg2.append("g")
-		      .attr("class", "x axis")
-		      .attr("transform", "translate(0," + height + ")")
-		      .call(xAxis)
-		      // Angles the x-axis labels
-		      .selectAll("text")  
-            .style("text-anchor", "end")
-				.style("font-size", "13px") 
-            .attr("dx", "-.2em")
-            .attr("dy", ".25em");
-            //.attr("transform", function(d) {return "rotate(-65)" });
-            
-		  //// Adds Y axis labels
-		  svg2.append("g")
-		      .attr("class", "y axis")
-		      .call(yAxis)
-		      .attr("transform", "translate(" + 1  + ",0)")
-		      .style("font-size", "13px") 
-		      //// Adds additional label for y-axis
-		      .append("text")
-		      .attr("transform", "rotate(-90)")
-		      .attr("y", 4)
-		      .attr("dy", ".71em")
-		      .style("text-anchor", "end")
-		      .style("font-size", "13px") 
-		      .text("H20 Discharge (CFS)");
+	//var formatPercent = d3.format("");
 	
-		  //// Properties of the bars
-		  svg2.selectAll(".bar")
-		      .data(dataParsed)
-		      .enter().append("rect")
-		      .attr("class", "bar")
-		      .attr("x", function(d) { return x(d.date); })	      
-		      .attr("width", x.rangeBand())
-		      .transition().delay(function (d,i){ return i * 10;}).duration(10)
- 				.attr("y", function(d) { return y(d.discharge_cfs); })
-		      .attr("height", function(d) { return height - y(d.discharge_cfs); });
-		   
-		   //// Add hover over events after transition completes
-		   svg2.selectAll(".bar")
-		   .on("mouseover", function(d) {      
-	            div.transition()        
-	                .duration(100)      
-	                .style("opacity", .9);      
-	            div.html("H20 Discharge: " + d.discharge_cfs + " cfs" + "<br/>" + 
-	            			"Discharge Above Ave: " + Math.round(((d.discharge_cfs - 220) / 220) * 100) + " % (cfs)" + "<br/>" + 
-	            			 "H20 Level: " + d.height_ft + " ft" + "<br/>" + 
-	            			 d.date)  
-	                .style("left", (d3.event.pageX) + "px")     
-	                .style("top", (d3.event.pageY - 28) + "px");    
-	            })                  
-	        .on("mouseout", function(d) {       
-	            div.transition()        
-	                .duration(500)      
-	                .style("opacity", 0);   
-	        });
-		      				
-			svg2.append("text")
-	        .attr("x", (width / 2))             
-	        .attr("y", 0 - (margin.top / 3))
-	        .attr("text-anchor", "middle")  
-	        .style("font-size", "19px") 
-	        .style("text-decoration", "underline")  
-	        .text("South Platte (@ Fort Lupton) Stream Flow During the 2013 Flood (Sep 9 - 15)");
-})	     
-
-
-////////////
-//// Chart 3
-////////////
-
-var xAxis = d3.svg.axis()
-    .scale(x)
-    .tickValues(dateRange)
-    .orient("bottom");
-
-var yAxis = d3.svg.axis()
-    .scale(y)
-    .orient("left");
-   // .tickFormat(formatPercent);
-
-var div = d3.select("#chart-container_3").append("div")   
-    .attr("class", "tooltip")               
-    .style("opacity", 0);
-
-var svg3 = d3.select("#chart-container_3").append("svg")
-	 .attr("class", "chart")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top * 2 + ")");
-    
-
-var dataParsed = [];
-
-d3.json("bigthompson_at_estespark.json",function(error,data){
-	if (error) return console.warn(error);
-   dataParsed = data;
-    	
-		  x.domain(dataParsed.map(function(d) { return d.date; }));
-		  y.domain([0, d3.max(dataParsed, function(d) { return d.discharge_cfs *1 ;})]);
-		
-		  //// Adds X axis labels
-		  svg3.append("g")
-		      .attr("class", "x axis")
-		      .attr("transform", "translate(0," + height + ")")
-		      .call(xAxis)
-		      // Angles the x-axis labels
-		      .selectAll("text")  
-            .style("text-anchor", "end")
-				.style("font-size", "13px") 
-            .attr("dx", "-.2em")
-            .attr("dy", ".25em");
-            //.attr("transform", function(d) {return "rotate(-65)" });
-            
-		  //// Adds Y axis labels
-		  svg3.append("g")
-		      .attr("class", "y axis")
-		      .call(yAxis)
-		      .attr("transform", "translate(" + 1  + ",0)")
-		      .style("font-size", "13px") 
-		      //// Adds additional label for y-axis
-		      .append("text")
-		      .attr("transform", "rotate(-90)")
-		      .attr("y", 4)
-		      .attr("dy", ".71em")
-		      .style("text-anchor", "end")
-		      .style("font-size", "13px") 
-		      .text("H20 Discharge (CFS)");
+//	var dateRange = ["2013-09-09 12:00", "2013-09-10 12:00", "2013-09-11 12:00", "2013-09-12 12:00", "2013-09-13 12:00", "2013-09-14 12:00", "2013-09-15 12:00"];
 	
-		  //// Properties of the bars
-		  svg3.selectAll(".bar")
-		      .data(dataParsed)
-		      .enter().append("rect")
-		      .attr("class", "bar")
-		      .attr("x", function(d) { return x(d.date); })	      
-		      .attr("width", x.rangeBand())
-		      .transition().delay(function (d,i){ return i * 10;}).duration(10)
- 				.attr("y", function(d) { return y(d.discharge_cfs); })
-		      .attr("height", function(d) { return height - y(d.discharge_cfs); });
-		   
-		   //// Add hover over events after transition completes
-		   svg3.selectAll(".bar")
-		   .on("mouseover", function(d) {      
-	            div.transition()        
-	                .duration(100)      
-	                .style("opacity", .9);      
-	            div.html("H20 Discharge: " + d.discharge_cfs + " cfs" + "<br/>" + 
-	            			"Discharge Above Ave: " + Math.round(((d.discharge_cfs - 26) / 26) * 100) + " % (cfs)" + "<br/>" + 
-	            			 "H20 Level: " + d.height_ft + " ft" + "<br/>" + 
-	            			 d.date)  
-	                .style("left", (d3.event.pageX) + "px")     
-	                .style("top", (d3.event.pageY - 28) + "px");    
-	            })                  
-	        .on("mouseout", function(d) {       
-	            div.transition()        
-	                .duration(500)      
-	                .style("opacity", 0);   
-	        });
-		      				
-			svg3.append("text")
-	        .attr("x", (width / 2))             
-	        .attr("y", 0 - (margin.top / 3))
-	        .attr("text-anchor", "middle")  
-	        .style("font-size", "19px") 
-	        .style("text-decoration", "underline")  
-	        .text("Big Thompson (@ Estes Park) Stream Flow During the 2013 Flood (Sep 9 - 15)");
-})	     
-
-
-////////////
-//// Chart 4
-////////////
-
-var xAxis = d3.svg.axis()
-    .scale(x)
-    .tickValues(dateRange)
-    .orient("bottom");
-
-var yAxis = d3.svg.axis()
-    .scale(y)
-    .orient("left");
-   // .tickFormat(formatPercent);
-
-var div = d3.select("#chart-container_4").append("div")   
-    .attr("class", "tooltip")               
-    .style("opacity", 0);
-
-var svg4 = d3.select("#chart-container_4").append("svg")
-	 .attr("class", "chart")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top * 2 + ")");
-    
-
-var dataParsed = [];
-
-d3.json("bear_creek_at_evergreen.json",function(error,data){
-	if (error) return console.warn(error);
-   dataParsed = data;
-    	
-		  x.domain(dataParsed.map(function(d) { return d.date; }));
-		  y.domain([0, d3.max(dataParsed, function(d) { return d.discharge_cfs *1 ;})]);
-		
-		  //// Adds X axis labels
-		  svg4.append("g")
-		      .attr("class", "x axis")
-		      .attr("transform", "translate(0," + height + ")")
-		      .call(xAxis)
-		      // Angles the x-axis labels
-		      .selectAll("text")  
-            .style("text-anchor", "end")
-				.style("font-size", "13px") 
-            .attr("dx", "-.2em")
-            .attr("dy", ".25em");
-            //.attr("transform", function(d) {return "rotate(-65)" });
-            
-		  //// Adds Y axis labels
-		  svg4.append("g")
-		      .attr("class", "y axis")
-		      .call(yAxis)
-		      .attr("transform", "translate(" + 1  + ",0)")
-		      .style("font-size", "13px") 
-		      //// Adds additional label for y-axis
-		      .append("text")
-		      .attr("transform", "rotate(-90)")
-		      .attr("y", 4)
-		      .attr("dy", ".71em")
-		      .style("text-anchor", "end")
-		      .style("font-size", "13px") 
-		      .text("H20 Discharge (CFS)");
 	
-		  //// Properties of the bars
-		  svg4.selectAll(".bar")
-		      .data(dataParsed)
-		      .enter().append("rect")
-		      .attr("class", "bar")
-		      .attr("x", function(d) { return x(d.date); })	      
-		      .attr("width", x.rangeBand())
-		      .transition().delay(function (d,i){ return i * 10;}).duration(10)
- 				.attr("y", function(d) { return y(d.discharge_cfs); })
-		      .attr("height", function(d) { return height - y(d.discharge_cfs); });
-		   
-		   //// Add hover over events after transition completes
-		   svg4.selectAll(".bar")
-		   .on("mouseover", function(d) {      
-	            div.transition()        
-	                .duration(100)      
-	                .style("opacity", .9);      
-	            div.html("H20 Discharge: " + d.discharge_cfs + " cfs" + "<br/>" + 
-	            			"Discharge Above Ave: " + Math.round(((d.discharge_cfs - 30) / 30) * 100) + " % (cfs)" + "<br/>" + 
-	            			 "H20 Level: " + d.height_ft + " ft" + "<br/>" + 
-	            			 d.date)  
-	                .style("left", (d3.event.pageX) + "px")     
-	                .style("top", (d3.event.pageY - 28) + "px");    
-	            })                  
-	        .on("mouseout", function(d) {       
-	            div.transition()        
-	                .duration(500)      
-	                .style("opacity", 0);   
-	        });
-		      				
-			svg4.append("text")
-	        .attr("x", (width / 2))             
-	        .attr("y", 0 - (margin.top / 3))
-	        .attr("text-anchor", "middle")  
-	        .style("font-size", "19px") 
-	        .style("text-decoration", "underline")  
-	        .text("Bear Creek (@ Evergreen) Stream Flow During the 2013 Flood (Sep 9 - 15)");
-})	    
-
-
-////////////
-//// Chart 4
-////////////
-
-var xAxis = d3.svg.axis()
-    .scale(x)
-    .tickValues(dateRange)
-    .orient("bottom");
-
-var yAxis = d3.svg.axis()
-    .scale(y)
-    .orient("left");
-   // .tickFormat(formatPercent);
-
-var div = d3.select("#chart-container_5").append("div")   
-    .attr("class", "tooltip")               
-    .style("opacity", 0);
-
-var svg5 = d3.select("#chart-container_5").append("svg")
-	 .attr("class", "chart")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top * 2 + ")");
-    
-
-var dataParsed = [];
-
-d3.json("clearcreek_at_golden.json",function(error,data){
-	if (error) return console.warn(error);
-   dataParsed = data;
-    	
-		  x.domain(dataParsed.map(function(d) { return d.date; }));
-		  y.domain([0, d3.max(dataParsed, function(d) { return d.discharge_cfs *1 ;})]);
-		
-		  //// Adds X axis labels
-		  svg5.append("g")
-		      .attr("class", "x axis")
-		      .attr("transform", "translate(0," + height + ")")
-		      .call(xAxis)
-		      // Angles the x-axis labels
-		      .selectAll("text")  
-            .style("text-anchor", "end")
-				.style("font-size", "13px") 
-            .attr("dx", "-.2em")
-            .attr("dy", ".25em");
-            //.attr("transform", function(d) {return "rotate(-65)" });
-            
-		  //// Adds Y axis labels
-		  svg5.append("g")
-		      .attr("class", "y axis")
-		      .call(yAxis)
-		      .attr("transform", "translate(" + 1  + ",0)")
-		      .style("font-size", "13px") 
-		      //// Adds additional label for y-axis
-		      .append("text")
-		      .attr("transform", "rotate(-90)")
-		      .attr("y", 4)
-		      .attr("dy", ".71em")
-		      .style("text-anchor", "end")
-		      .style("font-size", "13px") 
-		      .text("H20 Discharge (CFS)");
+	var x = d3.scale.ordinal()
+	    .rangeRoundBands([0, width], .1);
 	
-		  //// Properties of the bars
-		  svg5.selectAll(".bar")
-		      .data(dataParsed)
-		      .enter().append("rect")
-		      .attr("class", "bar")
-		      .attr("x", function(d) { return x(d.date); })	      
-		      .attr("width", x.rangeBand())
-		      .transition().delay(function (d,i){ return i * 10;}).duration(10)
- 				.attr("y", function(d) { return y(d.discharge_cfs); })
-		      .attr("height", function(d) { return height - y(d.discharge_cfs); });
-		   
-		   //// Add hover over events after transition completes
-		   svg5.selectAll(".bar")
-		   .on("mouseover", function(d) {      
-	            div.transition()        
-	                .duration(100)      
-	                .style("opacity", .9);      
-	            div.html("H20 Discharge: " + d.discharge_cfs + " cfs" + "<br/>" + 
-	            			"Discharge Above Ave: " + Math.round(((d.discharge_cfs - 123) / 123) * 100) + " % (cfs)" + "<br/>" + 
-	            			 "H20 Level: " + d.height_ft + " ft" + "<br/>" + 
-	            			 d.date)  
-	                .style("left", (d3.event.pageX) + "px")     
-	                .style("top", (d3.event.pageY - 28) + "px");    
-	            })                  
-	        .on("mouseout", function(d) {       
-	            div.transition()        
-	                .duration(500)      
-	                .style("opacity", 0);   
-	        });
-		      				
-			svg5.append("text")
-	        .attr("x", (width / 2))             
-	        .attr("y", 0 - (margin.top / 3))
-	        .attr("text-anchor", "middle")  
-	        .style("font-size", "19px") 
-	        .style("text-decoration", "underline")  
-	        .text("Clear Creek (@ Golden) Stream Flow During the 2013 Flood (Sep 9 - 15)");
-})	   
+	var y = d3.scale.linear()
+	    .range([height, 0]);
+	
+	var xAxis = d3.svg.axis()
+	    .scale(x)
+	    .tickValues(dateRange)
+	    .orient("bottom");
+	
+	var yAxis = d3.svg.axis()
+	    .scale(y)
+	    .orient("left");
+	   // .tickFormat(formatPercent);
+	   
+	var div = d3.select(containerDiv).append("div")   
+	    .attr("class", "tooltip")               
+	    .style("opacity", 0);
+	
+	var svg = d3.select(containerDiv).append("svg")
+		 .attr("class", "chart")
+	    .attr("width", width + margin.left + margin.right)
+	    .attr("height", height + margin.top + margin.bottom)
+	    .append("g")
+	    .attr("transform", "translate(" + margin.left + "," + margin.top * 2 + ")");
+	    
+	
+	var dataParsed = [];
+	
+	d3.json(fileName,function(error,data){
+		if (error) return console.warn(error);
+	   dataParsed = data;
+	    	
+			  x.domain(dataParsed.map(function(d) { return d.date; }));
+			  y.domain([0, d3.max(dataParsed, function(d) { return d.discharge_cfs *1 ;})]);
+			
+			  //// Adds X axis labels
+			  svg.append("g")
+			      .attr("class", "x axis")
+			      .attr("transform", "translate(0," + height + ")")
+			      .call(xAxis)
+			      // Angles the x-axis labels
+			      .selectAll("text")  
+	            .style("text-anchor", "end")
+					.style("font-size", "13px") 
+	            .attr("dx", "-.2em")
+	            .attr("dy", ".25em");
+	            //.attr("transform", function(d) {return "rotate(-65)" });
+	            
+			  //// Adds Y axis labels
+			  svg.append("g")
+			      .attr("class", "y axis")
+			      .call(yAxis)
+			      .attr("transform", "translate(" + 1  + ",0)")
+			      .style("font-size", "13px") 
+			      //// Adds additional label for y-axis
+			      .append("text")
+			      .attr("transform", "rotate(-90)")
+			      .attr("y", 4)
+			      .attr("dy", ".71em")
+			      .style("text-anchor", "end")
+			      .style("font-size", "13px") 
+			      .text("H20 Discharge (CFS)");
+		
+			  //// Properties of the bars
+			  svg.selectAll(".bar")
+			      .data(dataParsed)
+			      .enter().append("rect")
+			      .attr("class", "bar")
+			      .attr("x", function(d) { return x(d.date); })	      
+			      .attr("width", x.rangeBand())
+			      .transition().delay(function (d,i){ return i * transitionSpeed;}).duration(transitionSpeed)
+	 				.attr("y", function(d) { return y(d.discharge_cfs); })
+			      .attr("height", function(d) { return height - y(d.discharge_cfs); });
+			   
+			   //// Add hover over events after transition completes
+			   svg.selectAll(".bar")
+			   .on("mouseover", function(d) {      
+		            div.transition()        
+		                .duration(100)      
+		                .style("opacity", .9);      
+		            div.html("H20 Discharge: " + d.discharge_cfs.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " cfs" + "<br/>" + 
+		            			"Discharge Above Ave: " + Math.round(((d.discharge_cfs - averageDischarge) / averageDischarge) * 100).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " % (cfs)" + "<br/>" + 
+		            			 "H20 Level: " + d.height_ft + " ft" + "<br/>" + 
+		            			 d.date)   
+		                .style("left", (d3.event.pageX) + "px")     
+		                .style("top", (d3.event.pageY - 28) + "px");    
+		            })                  
+		        .on("mouseout", function(d) {       
+		            div.transition()        
+		                .duration(500)      
+		                .style("opacity", 0);   
+		        });
+			      				
+				svg.append("text")
+		        .attr("x", (width / 2))             
+		        .attr("y", 0 - (margin.top / 3))
+		        .attr("text-anchor", "middle")  
+		        .style("font-size", "19px") 
+		        .style("text-decoration", "underline")  
+		        .text(chartTitle);
+	})	  
+
+}
+
+dateRange = ["2013-09-09 12:00", "2013-09-10 12:00", "2013-09-11 12:00", "2013-09-12 12:00", "2013-09-13 12:00", "2013-09-14 12:00", "2013-09-15 12:00"];
+containerDiv = "#chart-container";
+chartTitle = "Boulder Creek (@ Longmont) Stream Flow During the 2013 Flood (Sep 9 - 15)";
+averageDischarge = 26;
+transitionSpeed = 10;
+generateChart("boulder_creek_at_longmont.json", containerDiv, chartTitle, dateRange, averageDischarge, transitionSpeed);
+
+containerDiv = "#chart-container_2";
+chartTitle = "South Platte (@ Fort Lupton) Stream Flow During the 2013 Flood (Sep 9 - 15)";
+averageDischarge = 220;
+generateChart("southplatte_at_fortlupton.json", containerDiv, chartTitle, dateRange, averageDischarge, transitionSpeed);
+
+containerDiv = "#chart-container_3";
+chartTitle = "Big Thompson (@ Estes Park) Stream Flow During the 2013 Flood (Sep 9 - 15)";
+averageDischarge = 26;
+generateChart("bigthompson_at_estespark.json", containerDiv, chartTitle, dateRange, averageDischarge, transitionSpeed);
+
+containerDiv = "#chart-container_4";
+averageDischarge = 30;
+chartTitle = "Bear Creek (@ Evergreen) Stream Flow During the 2013 Flood (Sep 9 - 15)";
+generateChart("bear_creek_at_evergreen.json", containerDiv, chartTitle, dateRange, averageDischarge, transitionSpeed);
+
+containerDiv = "#chart-container_5";
+chartTitle = "Clear Creek (@ Golden) Stream Flow During the 2013 Flood (Sep 9 - 15)";
+averageDischarge = 123;
+generateChart("clearcreek_at_golden.json", containerDiv, chartTitle, dateRange, averageDischarge, transitionSpeed);
+
+containerDiv = "#chart-container_6";
+chartTitle = "Big Thompson (@ Loveland) Stream Flow During the 2013 Flood (Sep 9 - 15) - INCOMPLETE DATA DUE TO DAMAGED STREAM GUAGE";
+dateRange = ["2013-09-09 12:00", "2013-09-10 12:00", "2013-09-11 12:00", "2013-09-12 12:00"];
+averageDischarge = 29;
+transitionSpeed = 10;
+generateChart("bigthompson_creek_at_loveland.json", containerDiv, chartTitle, dateRange, averageDischarge, transitionSpeed);
+
 
 
 //////////
@@ -742,21 +420,21 @@ var mapquestUrl = 'http://otile{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
 function onEachFeature(feature, layer) {
 
 		layer.on({
-            mouseover: highlightFeature,
+            mouseover: hoverAction,
             mouseout: resetHighlight
             });
- 		if (feature.properties) {
-		  	layer.bindPopup(
-		  		'<div class="infoHeader">' + '<b>' + "Stream Gauge Info" +'</b>' +
-				'</div><div class="infoContent">' + 'Site Name:  ' + '<b>' +feature.properties.sitename +'</b>' +
-				'</div><div class="infoContent">' + 'Max Discharge (cfs):  ' + '<b>' +feature.properties.maxflow +'</b>' +
-				'</div><div class="infoContent">' + 'Gauge Status:  ' + '<b>' +feature.properties.gaugestatus +'</b>',
-				 {maxWidth: 400}
-			);
- 		}
+ //		if (feature.properties) {
+//		  	layer.bindPopup(
+//		  		'<div class="infoHeader">' + '<b>' + "Stream Gauge Info" +'</b>' +
+//				'</div><div class="infoContent">' + 'Site Name:  ' + '<b>' +feature.properties.sitename +'</b>' +
+//				'</div><div class="infoContent">' + 'Max Discharge (cfs):  ' + '<b>' +feature.properties.maxflow +'</b>' +
+//				'</div><div class="infoContent">' + 'Gauge Status:  ' + '<b>' +feature.properties.gaugestatus +'</b>',
+//				 {maxWidth: 400}
+//			);
+// 		}
 }		
 
-function highlightFeature(e) {
+function hoverAction(e) {
     var layer = e.target;
 
     layer.setStyle({ // highlight the feature
@@ -764,11 +442,31 @@ function highlightFeature(e) {
         color: '#666',
         dashArray: '',
         fillOpacity: 0.6
-    });
+    }); 
+    
+    if (layer.feature.properties.gaugestatus == "DAMAGED DURING FLOOD") {
+    	//var popup = L.popup()
+    	//.setLatLng(e.latlng) 
+//    	.setContent('<div class="infoHeader"><b> Damaged during the flood</b>' +
+//    					'<div class="infoContent">The last known discharge rate is: <b>'+ layer.feature.properties.maxflow +' - CFS </b></div>')
+//    	.openOn(map);
 
-//    if (!L.Browser.ie && !L.Browser.opera) {
-//        layer.bringToFront();
-//    }
+		$("div#info-box").html('<div id="info-content"><div class="infoHeader"><b>Stream Gauge Info</b></div>' +
+		'<div class="info-alert"><b> Damaged during the flood</b></div>' +
+		'<div class="infoContent">Site Name: <b>' + layer.feature.properties.sitename +'</b></div>' +
+		'<div class="infoContent">The last known discharge rate is: <b>'+ layer.feature.properties.maxflow +' - CFS </b></div>' +
+		'<div class="infoContent"> Discharge Above Average: <b>' + Math.round(((layer.feature.properties.maxflow - layer.feature.properties.average) / layer.feature.properties.average) * 100).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' % (cfs)</b><br/></div>' 
+		);
+    }
+    else if (layer.feature.properties.gaugestatus == "Active") {
+    
+    	$("div#info-box").html('<div id="info-content"><div class="infoHeader">' + '<b>' + 'Stream Gauge Info</b></div>' +
+				'<div class="infoContent"> Site Name: <b>' + layer.feature.properties.sitename +'</b></div>' +
+				'<div class="infoContent"> Max Discharge (cfs):  ' + '<b>' + layer.feature.properties.maxflow +'</b></div>' +
+				'<div class="infoContent"> Discharge Above Average: <b>' + Math.round(((layer.feature.properties.maxflow - layer.feature.properties.average) / layer.feature.properties.average) * 100).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' % (cfs)</b><br/></div>' + 		
+				'<div class="infoContent"> Gauge Status: <b>' + layer.feature.properties.gaugestatus + '</b></div>'
+				);
+    }
 }
 
 function resetHighlight(e) {
@@ -778,10 +476,10 @@ function resetHighlight(e) {
         weight: 1,
         color: 'black'
     });
-
-//    if (!L.Browser.ie && !L.Browser.opera) {
-//        layer.bringToBack();
-//    }
+    
+    $("div#info-box").html();
+    
+   $("#info-content").remove();
 }
 					
 	
