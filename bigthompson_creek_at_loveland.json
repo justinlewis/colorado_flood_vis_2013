@@ -1,0 +1,2536 @@
+[
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 00:00",
+		"discharge_cfs": "67",
+		"height_ft": "1.57"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 00:15",
+		"discharge_cfs": "68",
+		"height_ft": "1.58"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 00:30",
+		"discharge_cfs": "67",
+		"height_ft": "1.57"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 00:45",
+		"discharge_cfs": "67",
+		"height_ft": "1.57"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 01:00",
+		"discharge_cfs": "67",
+		"height_ft": "1.57"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 01:15",
+		"discharge_cfs": "67",
+		"height_ft": "1.57"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 01:30",
+		"discharge_cfs": "68",
+		"height_ft": "1.58"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 01:45",
+		"discharge_cfs": "67",
+		"height_ft": "1.57"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 02:00",
+		"discharge_cfs": "69",
+		"height_ft": "1.59"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 02:15",
+		"discharge_cfs": "68",
+		"height_ft": "1.58"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 02:30",
+		"discharge_cfs": "69",
+		"height_ft": "1.59"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 02:45",
+		"discharge_cfs": "69",
+		"height_ft": "1.59"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 03:00",
+		"discharge_cfs": "69",
+		"height_ft": "1.59"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 03:15",
+		"discharge_cfs": "69",
+		"height_ft": "1.59"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 03:30",
+		"discharge_cfs": "70",
+		"height_ft": "1.6"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 03:45",
+		"discharge_cfs": "70",
+		"height_ft": "1.6"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 04:00",
+		"discharge_cfs": "70",
+		"height_ft": "1.6"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 04:15",
+		"discharge_cfs": "71",
+		"height_ft": "1.61"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 04:30",
+		"discharge_cfs": "71",
+		"height_ft": "1.61"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 04:45",
+		"discharge_cfs": "71",
+		"height_ft": "1.61"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 05:00",
+		"discharge_cfs": "71",
+		"height_ft": "1.61"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 05:15",
+		"discharge_cfs": "70",
+		"height_ft": "1.6"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 05:30",
+		"discharge_cfs": "71",
+		"height_ft": "1.61"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 05:45",
+		"discharge_cfs": "70",
+		"height_ft": "1.6"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 06:00",
+		"discharge_cfs": "71",
+		"height_ft": "1.61"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 06:15",
+		"discharge_cfs": "71",
+		"height_ft": "1.61"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 06:30",
+		"discharge_cfs": "71",
+		"height_ft": "1.61"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 06:45",
+		"discharge_cfs": "71",
+		"height_ft": "1.61"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 07:00",
+		"discharge_cfs": "71",
+		"height_ft": "1.61"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 07:15",
+		"discharge_cfs": "70",
+		"height_ft": "1.6"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 07:30",
+		"discharge_cfs": "71",
+		"height_ft": "1.61"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 07:45",
+		"discharge_cfs": "72",
+		"height_ft": "1.62"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 08:00",
+		"discharge_cfs": "71",
+		"height_ft": "1.61"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 08:15",
+		"discharge_cfs": "75",
+		"height_ft": "1.64"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 08:30",
+		"discharge_cfs": "77",
+		"height_ft": "1.66"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 08:45",
+		"discharge_cfs": "78",
+		"height_ft": "1.67"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 09:00",
+		"discharge_cfs": "77",
+		"height_ft": "1.66"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 09:15",
+		"discharge_cfs": "78",
+		"height_ft": "1.67"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 09:30",
+		"discharge_cfs": "77",
+		"height_ft": "1.66"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 09:45",
+		"discharge_cfs": "77",
+		"height_ft": "1.66"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 10:00",
+		"discharge_cfs": "77",
+		"height_ft": "1.66"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 10:15",
+		"discharge_cfs": "77",
+		"height_ft": "1.66"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 10:30",
+		"discharge_cfs": "76",
+		"height_ft": "1.65"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 10:45",
+		"discharge_cfs": "76",
+		"height_ft": "1.65"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 11:00",
+		"discharge_cfs": "76",
+		"height_ft": "1.65"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 11:15",
+		"discharge_cfs": "75",
+		"height_ft": "1.64"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 11:30",
+		"discharge_cfs": "72",
+		"height_ft": "1.62"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 11:45",
+		"discharge_cfs": "71",
+		"height_ft": "1.61"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 12:00",
+		"discharge_cfs": "69",
+		"height_ft": "1.59"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 12:15",
+		"discharge_cfs": "67",
+		"height_ft": "1.57"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 12:30",
+		"discharge_cfs": "66",
+		"height_ft": "1.56"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 12:45",
+		"discharge_cfs": "63",
+		"height_ft": "1.54"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 13:00",
+		"discharge_cfs": "60",
+		"height_ft": "1.51"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 13:15",
+		"discharge_cfs": "58",
+		"height_ft": "1.49"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 13:30",
+		"discharge_cfs": "56",
+		"height_ft": "1.47"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 13:45",
+		"discharge_cfs": "54",
+		"height_ft": "1.45"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 14:00",
+		"discharge_cfs": "52",
+		"height_ft": "1.43"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 14:15",
+		"discharge_cfs": "51",
+		"height_ft": "1.41"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 14:30",
+		"discharge_cfs": "50",
+		"height_ft": "1.4"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 14:45",
+		"discharge_cfs": "48",
+		"height_ft": "1.38"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 15:00",
+		"discharge_cfs": "48",
+		"height_ft": "1.38"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 15:15",
+		"discharge_cfs": "47",
+		"height_ft": "1.37"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 15:30",
+		"discharge_cfs": "48",
+		"height_ft": "1.38"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 15:45",
+		"discharge_cfs": "48",
+		"height_ft": "1.38"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 16:00",
+		"discharge_cfs": "51",
+		"height_ft": "1.41"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 16:15",
+		"discharge_cfs": "65",
+		"height_ft": "1.55"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 16:30",
+		"discharge_cfs": "66",
+		"height_ft": "1.56"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 16:45",
+		"discharge_cfs": "58",
+		"height_ft": "1.49"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 17:00",
+		"discharge_cfs": "53",
+		"height_ft": "1.44"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 17:15",
+		"discharge_cfs": "52",
+		"height_ft": "1.42"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 17:30",
+		"discharge_cfs": "51",
+		"height_ft": "1.41"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 17:45",
+		"discharge_cfs": "49",
+		"height_ft": "1.39"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 18:00",
+		"discharge_cfs": "49",
+		"height_ft": "1.39"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 18:15",
+		"discharge_cfs": "49",
+		"height_ft": "1.39"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 18:30",
+		"discharge_cfs": "50",
+		"height_ft": "1.4"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 18:45",
+		"discharge_cfs": "49",
+		"height_ft": "1.39"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 19:00",
+		"discharge_cfs": "49",
+		"height_ft": "1.39"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 19:15",
+		"discharge_cfs": "49",
+		"height_ft": "1.39"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 19:30",
+		"discharge_cfs": "48",
+		"height_ft": "1.38"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 19:45",
+		"discharge_cfs": "48",
+		"height_ft": "1.38"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 20:00",
+		"discharge_cfs": "48",
+		"height_ft": "1.38"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 20:15",
+		"discharge_cfs": "48",
+		"height_ft": "1.38"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 20:30",
+		"discharge_cfs": "48",
+		"height_ft": "1.38"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 20:45",
+		"discharge_cfs": "49",
+		"height_ft": "1.39"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 21:00",
+		"discharge_cfs": "49",
+		"height_ft": "1.39"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 21:15",
+		"discharge_cfs": "52",
+		"height_ft": "1.42"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 21:30",
+		"discharge_cfs": "56",
+		"height_ft": "1.47"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 21:45",
+		"discharge_cfs": "71",
+		"height_ft": "1.61"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 22:00",
+		"discharge_cfs": "76",
+		"height_ft": "1.65"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 22:15",
+		"discharge_cfs": "72",
+		"height_ft": "1.62"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 22:30",
+		"discharge_cfs": "70",
+		"height_ft": "1.6"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 22:45",
+		"discharge_cfs": "67",
+		"height_ft": "1.57"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 23:00",
+		"discharge_cfs": "67",
+		"height_ft": "1.57"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 23:15",
+		"discharge_cfs": "66",
+		"height_ft": "1.56"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 23:30",
+		"discharge_cfs": "65",
+		"height_ft": "1.55"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-09 23:45",
+		"discharge_cfs": "66",
+		"height_ft": "1.56"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 00:00",
+		"discharge_cfs": "68",
+		"height_ft": "1.58"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 00:15",
+		"discharge_cfs": "78",
+		"height_ft": "1.67"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 00:30",
+		"discharge_cfs": "83",
+		"height_ft": "1.71"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 00:45",
+		"discharge_cfs": "78",
+		"height_ft": "1.67"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 01:00",
+		"discharge_cfs": "75",
+		"height_ft": "1.64"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 01:15",
+		"discharge_cfs": "71",
+		"height_ft": "1.61"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 01:30",
+		"discharge_cfs": "71",
+		"height_ft": "1.61"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 01:45",
+		"discharge_cfs": "70",
+		"height_ft": "1.6"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 02:00",
+		"discharge_cfs": "70",
+		"height_ft": "1.6"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 02:15",
+		"discharge_cfs": "70",
+		"height_ft": "1.6"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 02:30",
+		"discharge_cfs": "70",
+		"height_ft": "1.6"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 02:45",
+		"discharge_cfs": "69",
+		"height_ft": "1.59"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 03:00",
+		"discharge_cfs": "71",
+		"height_ft": "1.61"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 03:15",
+		"discharge_cfs": "70",
+		"height_ft": "1.6"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 03:30",
+		"discharge_cfs": "69",
+		"height_ft": "1.59"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 03:45",
+		"discharge_cfs": "70",
+		"height_ft": "1.6"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 04:00",
+		"discharge_cfs": "71",
+		"height_ft": "1.61"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 04:15",
+		"discharge_cfs": "74",
+		"height_ft": "1.63"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 04:30",
+		"discharge_cfs": "74",
+		"height_ft": "1.63"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 04:45",
+		"discharge_cfs": "74",
+		"height_ft": "1.63"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 05:00",
+		"discharge_cfs": "74",
+		"height_ft": "1.63"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 05:15",
+		"discharge_cfs": "75",
+		"height_ft": "1.64"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 05:30",
+		"discharge_cfs": "74",
+		"height_ft": "1.63"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 05:45",
+		"discharge_cfs": "74",
+		"height_ft": "1.63"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 06:00",
+		"discharge_cfs": "74",
+		"height_ft": "1.63"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 06:15",
+		"discharge_cfs": "72",
+		"height_ft": "1.62"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 06:30",
+		"discharge_cfs": "72",
+		"height_ft": "1.62"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 06:45",
+		"discharge_cfs": "72",
+		"height_ft": "1.62"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 07:00",
+		"discharge_cfs": "71",
+		"height_ft": "1.61"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 07:15",
+		"discharge_cfs": "71",
+		"height_ft": "1.61"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 07:30",
+		"discharge_cfs": "70",
+		"height_ft": "1.6"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 07:45",
+		"discharge_cfs": "69",
+		"height_ft": "1.59"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 08:00",
+		"discharge_cfs": "69",
+		"height_ft": "1.59"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 08:15",
+		"discharge_cfs": "67",
+		"height_ft": "1.57"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 08:30",
+		"discharge_cfs": "66",
+		"height_ft": "1.56"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 08:45",
+		"discharge_cfs": "66",
+		"height_ft": "1.56"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 09:00",
+		"discharge_cfs": "66",
+		"height_ft": "1.56"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 09:15",
+		"discharge_cfs": "66",
+		"height_ft": "1.56"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 09:30",
+		"discharge_cfs": "65",
+		"height_ft": "1.55"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 09:45",
+		"discharge_cfs": "66",
+		"height_ft": "1.56"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 10:00",
+		"discharge_cfs": "66",
+		"height_ft": "1.56"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 10:15",
+		"discharge_cfs": "66",
+		"height_ft": "1.56"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 10:30",
+		"discharge_cfs": "66",
+		"height_ft": "1.56"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 10:45",
+		"discharge_cfs": "65",
+		"height_ft": "1.55"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 11:00",
+		"discharge_cfs": "65",
+		"height_ft": "1.55"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 11:15",
+		"discharge_cfs": "65",
+		"height_ft": "1.55"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 11:30",
+		"discharge_cfs": "65",
+		"height_ft": "1.55"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 11:45",
+		"discharge_cfs": "67",
+		"height_ft": "1.57"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 12:00",
+		"discharge_cfs": "66",
+		"height_ft": "1.56"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 12:15",
+		"discharge_cfs": "66",
+		"height_ft": "1.56"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 12:30",
+		"discharge_cfs": "67",
+		"height_ft": "1.57"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 12:45",
+		"discharge_cfs": "67",
+		"height_ft": "1.57"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 13:00",
+		"discharge_cfs": "66",
+		"height_ft": "1.56"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 13:15",
+		"discharge_cfs": "66",
+		"height_ft": "1.56"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 13:30",
+		"discharge_cfs": "66",
+		"height_ft": "1.56"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 13:45",
+		"discharge_cfs": "65",
+		"height_ft": "1.55"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 14:00",
+		"discharge_cfs": "65",
+		"height_ft": "1.55"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 14:15",
+		"discharge_cfs": "65",
+		"height_ft": "1.55"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 14:30",
+		"discharge_cfs": "65",
+		"height_ft": "1.55"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 14:45",
+		"discharge_cfs": "66",
+		"height_ft": "1.56"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 15:00",
+		"discharge_cfs": "66",
+		"height_ft": "1.56"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 15:15",
+		"discharge_cfs": "66",
+		"height_ft": "1.56"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 15:30",
+		"discharge_cfs": "65",
+		"height_ft": "1.55"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 15:45",
+		"discharge_cfs": "65",
+		"height_ft": "1.55"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 16:00",
+		"discharge_cfs": "65",
+		"height_ft": "1.55"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 16:15",
+		"discharge_cfs": "65",
+		"height_ft": "1.55"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 16:30",
+		"discharge_cfs": "63",
+		"height_ft": "1.54"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 16:45",
+		"discharge_cfs": "65",
+		"height_ft": "1.55"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 17:00",
+		"discharge_cfs": "65",
+		"height_ft": "1.55"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 17:15",
+		"discharge_cfs": "63",
+		"height_ft": "1.54"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 17:30",
+		"discharge_cfs": "63",
+		"height_ft": "1.54"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 17:45",
+		"discharge_cfs": "63",
+		"height_ft": "1.54"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 18:00",
+		"discharge_cfs": "63",
+		"height_ft": "1.54"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 18:15",
+		"discharge_cfs": "65",
+		"height_ft": "1.55"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 18:30",
+		"discharge_cfs": "65",
+		"height_ft": "1.55"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 18:45",
+		"discharge_cfs": "66",
+		"height_ft": "1.56"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 19:00",
+		"discharge_cfs": "66",
+		"height_ft": "1.56"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 19:15",
+		"discharge_cfs": "66",
+		"height_ft": "1.56"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 19:30",
+		"discharge_cfs": "68",
+		"height_ft": "1.58"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 19:45",
+		"discharge_cfs": "70",
+		"height_ft": "1.6"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 20:00",
+		"discharge_cfs": "71",
+		"height_ft": "1.61"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 20:15",
+		"discharge_cfs": "88",
+		"height_ft": "1.75"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 20:30",
+		"discharge_cfs": "88",
+		"height_ft": "1.75"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 20:45",
+		"discharge_cfs": "88",
+		"height_ft": "1.75"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 21:00",
+		"discharge_cfs": "88",
+		"height_ft": "1.75"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 21:15",
+		"discharge_cfs": "91",
+		"height_ft": "1.77"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 21:30",
+		"discharge_cfs": "94",
+		"height_ft": "1.79"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 21:45",
+		"discharge_cfs": "94",
+		"height_ft": "1.79"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 22:00",
+		"discharge_cfs": "94",
+		"height_ft": "1.79"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 22:15",
+		"discharge_cfs": "95",
+		"height_ft": "1.8"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 22:30",
+		"discharge_cfs": "94",
+		"height_ft": "1.79"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 22:45",
+		"discharge_cfs": "91",
+		"height_ft": "1.77"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 23:00",
+		"discharge_cfs": "88",
+		"height_ft": "1.75"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 23:15",
+		"discharge_cfs": "87",
+		"height_ft": "1.74"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 23:30",
+		"discharge_cfs": "85",
+		"height_ft": "1.72"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-10 23:45",
+		"discharge_cfs": "82",
+		"height_ft": "1.7"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 00:00",
+		"discharge_cfs": "83",
+		"height_ft": "1.71"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 00:15",
+		"discharge_cfs": "82",
+		"height_ft": "1.7"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 00:30",
+		"discharge_cfs": "83",
+		"height_ft": "1.71"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 00:45",
+		"discharge_cfs": "83",
+		"height_ft": "1.71"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 01:00",
+		"discharge_cfs": "83",
+		"height_ft": "1.71"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 01:15",
+		"discharge_cfs": "83",
+		"height_ft": "1.71"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 01:30",
+		"discharge_cfs": "82",
+		"height_ft": "1.7"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 01:45",
+		"discharge_cfs": "82",
+		"height_ft": "1.7"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 02:00",
+		"discharge_cfs": "82",
+		"height_ft": "1.7"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 02:15",
+		"discharge_cfs": "80",
+		"height_ft": "1.68"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 02:30",
+		"discharge_cfs": "80",
+		"height_ft": "1.68"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 02:45",
+		"discharge_cfs": "82",
+		"height_ft": "1.7"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 03:00",
+		"discharge_cfs": "82",
+		"height_ft": "1.7"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 03:15",
+		"discharge_cfs": "82",
+		"height_ft": "1.7"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 03:30",
+		"discharge_cfs": "83",
+		"height_ft": "1.71"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 03:45",
+		"discharge_cfs": "86",
+		"height_ft": "1.73"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 04:00",
+		"discharge_cfs": "88",
+		"height_ft": "1.75"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 04:15",
+		"discharge_cfs": "90",
+		"height_ft": "1.76"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 04:30",
+		"discharge_cfs": "90",
+		"height_ft": "1.76"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 04:45",
+		"discharge_cfs": "92",
+		"height_ft": "1.78"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 05:00",
+		"discharge_cfs": "90",
+		"height_ft": "1.76"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 05:15",
+		"discharge_cfs": "91",
+		"height_ft": "1.77"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 05:30",
+		"discharge_cfs": "92",
+		"height_ft": "1.78"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 05:45",
+		"discharge_cfs": "94",
+		"height_ft": "1.79"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 06:00",
+		"discharge_cfs": "94",
+		"height_ft": "1.79"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 06:15",
+		"discharge_cfs": "95",
+		"height_ft": "1.8"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 06:30",
+		"discharge_cfs": "95",
+		"height_ft": "1.8"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 06:45",
+		"discharge_cfs": "96",
+		"height_ft": "1.81"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 07:00",
+		"discharge_cfs": "95",
+		"height_ft": "1.8"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 07:15",
+		"discharge_cfs": "94",
+		"height_ft": "1.79"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 07:30",
+		"discharge_cfs": "95",
+		"height_ft": "1.8"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 07:45",
+		"discharge_cfs": "95",
+		"height_ft": "1.8"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 08:00",
+		"discharge_cfs": "98",
+		"height_ft": "1.82"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 08:15",
+		"discharge_cfs": "95",
+		"height_ft": "1.8"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 08:30",
+		"discharge_cfs": "98",
+		"height_ft": "1.82"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 08:45",
+		"discharge_cfs": "98",
+		"height_ft": "1.82"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 09:00",
+		"discharge_cfs": "98",
+		"height_ft": "1.82"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 09:15",
+		"discharge_cfs": "99",
+		"height_ft": "1.83"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 09:30",
+		"discharge_cfs": "102",
+		"height_ft": "1.85"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 09:45",
+		"discharge_cfs": "102",
+		"height_ft": "1.85"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 10:00",
+		"discharge_cfs": "103",
+		"height_ft": "1.86"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 10:15",
+		"discharge_cfs": "102",
+		"height_ft": "1.85"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 10:30",
+		"discharge_cfs": "105",
+		"height_ft": "1.87"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 10:45",
+		"discharge_cfs": "103",
+		"height_ft": "1.86"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 11:00",
+		"discharge_cfs": "102",
+		"height_ft": "1.85"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 11:15",
+		"discharge_cfs": "102",
+		"height_ft": "1.85"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 11:30",
+		"discharge_cfs": "98",
+		"height_ft": "1.82"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 11:45",
+		"discharge_cfs": "92",
+		"height_ft": "1.78"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 12:00",
+		"discharge_cfs": "85",
+		"height_ft": "1.72"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 12:15",
+		"discharge_cfs": "80",
+		"height_ft": "1.68"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 12:30",
+		"discharge_cfs": "77",
+		"height_ft": "1.66"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 12:45",
+		"discharge_cfs": "75",
+		"height_ft": "1.64"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 13:00",
+		"discharge_cfs": "75",
+		"height_ft": "1.64"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 13:15",
+		"discharge_cfs": "78",
+		"height_ft": "1.67"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 13:30",
+		"discharge_cfs": "80",
+		"height_ft": "1.68"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 13:45",
+		"discharge_cfs": "80",
+		"height_ft": "1.68"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 14:00",
+		"discharge_cfs": "82",
+		"height_ft": "1.7"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 14:15",
+		"discharge_cfs": "81",
+		"height_ft": "1.69"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 14:30",
+		"discharge_cfs": "83",
+		"height_ft": "1.71"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 14:45",
+		"discharge_cfs": "82",
+		"height_ft": "1.7"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 15:00",
+		"discharge_cfs": "83",
+		"height_ft": "1.71"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 15:15",
+		"discharge_cfs": "85",
+		"height_ft": "1.72"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 15:30",
+		"discharge_cfs": "90",
+		"height_ft": "1.76"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 15:45",
+		"discharge_cfs": "112",
+		"height_ft": "1.92"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 16:00",
+		"discharge_cfs": "154",
+		"height_ft": "2.19"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 16:15",
+		"discharge_cfs": "136",
+		"height_ft": "2.08"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 16:30",
+		"discharge_cfs": "131",
+		"height_ft": "2.05"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 16:45",
+		"discharge_cfs": "117",
+		"height_ft": "1.96"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 17:00",
+		"discharge_cfs": "102",
+		"height_ft": "1.85"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 17:15",
+		"discharge_cfs": "92",
+		"height_ft": "1.78"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 17:30",
+		"discharge_cfs": "87",
+		"height_ft": "1.74"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 17:45",
+		"discharge_cfs": "87",
+		"height_ft": "1.74"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 18:00",
+		"discharge_cfs": "86",
+		"height_ft": "1.73"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 18:15",
+		"discharge_cfs": "82",
+		"height_ft": "1.7"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 18:30",
+		"discharge_cfs": "82",
+		"height_ft": "1.7"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 18:45",
+		"discharge_cfs": "81",
+		"height_ft": "1.69"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 19:00",
+		"discharge_cfs": "82",
+		"height_ft": "1.7"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 19:15",
+		"discharge_cfs": "81",
+		"height_ft": "1.69"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 19:30",
+		"discharge_cfs": "82",
+		"height_ft": "1.7"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 19:45",
+		"discharge_cfs": "81",
+		"height_ft": "1.69"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 20:00",
+		"discharge_cfs": "80",
+		"height_ft": "1.68"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 20:15",
+		"discharge_cfs": "80",
+		"height_ft": "1.68"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 20:30",
+		"discharge_cfs": "81",
+		"height_ft": "1.69"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 20:45",
+		"discharge_cfs": "81",
+		"height_ft": "1.69"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 21:00",
+		"discharge_cfs": "80",
+		"height_ft": "1.68"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 21:15",
+		"discharge_cfs": "78",
+		"height_ft": "1.67"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 21:30",
+		"discharge_cfs": "78",
+		"height_ft": "1.67"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 21:45",
+		"discharge_cfs": "76",
+		"height_ft": "1.65"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 22:00",
+		"discharge_cfs": "75",
+		"height_ft": "1.64"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 22:15",
+		"discharge_cfs": "77",
+		"height_ft": "1.66"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 22:30",
+		"discharge_cfs": "80",
+		"height_ft": "1.68"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 22:45",
+		"discharge_cfs": "83",
+		"height_ft": "1.71"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 23:00",
+		"discharge_cfs": "91",
+		"height_ft": "1.77"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 23:15",
+		"discharge_cfs": "113",
+		"height_ft": "1.93"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 23:30",
+		"discharge_cfs": "138",
+		"height_ft": "2.09"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-11 23:45",
+		"discharge_cfs": "139",
+		"height_ft": "2.1"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 00:00",
+		"discharge_cfs": "127",
+		"height_ft": "2.02"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 00:15",
+		"discharge_cfs": "117",
+		"height_ft": "1.96"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 00:30",
+		"discharge_cfs": "110",
+		"height_ft": "1.91"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 00:45",
+		"discharge_cfs": "113",
+		"height_ft": "1.93"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 01:00",
+		"discharge_cfs": "112",
+		"height_ft": "1.92"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 01:15",
+		"discharge_cfs": "113",
+		"height_ft": "1.93"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 01:30",
+		"discharge_cfs": "133",
+		"height_ft": "2.06"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 01:45",
+		"discharge_cfs": "175",
+		"height_ft": "2.32"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 02:00",
+		"discharge_cfs": "221",
+		"height_ft": "2.56"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 02:15",
+		"discharge_cfs": "246",
+		"height_ft": "2.68"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 02:30",
+		"discharge_cfs": "261",
+		"height_ft": "2.75"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 02:45",
+		"discharge_cfs": "277",
+		"height_ft": "2.82"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 03:00",
+		"discharge_cfs": "282",
+		"height_ft": "2.84"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 03:15",
+		"discharge_cfs": "307",
+		"height_ft": "2.95"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 03:30",
+		"discharge_cfs": "342",
+		"height_ft": "3.09"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 03:45",
+		"discharge_cfs": "355",
+		"height_ft": "3.15"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 04:00",
+		"discharge_cfs": "362",
+		"height_ft": "3.18"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 04:15",
+		"discharge_cfs": "386",
+		"height_ft": "3.27"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 04:30",
+		"discharge_cfs": "397",
+		"height_ft": "3.31"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 04:45",
+		"discharge_cfs": "427",
+		"height_ft": "3.42"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 05:00",
+		"discharge_cfs": "444",
+		"height_ft": "3.48"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 05:15",
+		"discharge_cfs": "474",
+		"height_ft": "3.58"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 05:30",
+		"discharge_cfs": "501",
+		"height_ft": "3.67"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 05:45",
+		"discharge_cfs": "522",
+		"height_ft": "3.74"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 06:00",
+		"discharge_cfs": "535",
+		"height_ft": "3.78"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 06:15",
+		"discharge_cfs": "554",
+		"height_ft": "3.84"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 06:30",
+		"discharge_cfs": "613",
+		"height_ft": "4.02"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 06:45",
+		"discharge_cfs": "726",
+		"height_ft": "4.34"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 07:00",
+		"discharge_cfs": "817",
+		"height_ft": "4.58"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 07:15",
+		"discharge_cfs": "892",
+		"height_ft": "4.77"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 07:30",
+		"discharge_cfs": "946",
+		"height_ft": "4.9"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 07:45",
+		"discharge_cfs": "954",
+		"height_ft": "4.92"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 08:00",
+		"discharge_cfs": "1010",
+		"height_ft": "5.04"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 08:15",
+		"discharge_cfs": "1130",
+		"height_ft": "5.31"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 08:30",
+		"discharge_cfs": "1360",
+		"height_ft": "5.79"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 08:45",
+		"discharge_cfs": "1580",
+		"height_ft": "6.22"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 09:00",
+		"discharge_cfs": "1840",
+		"height_ft": "6.69"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 09:15",
+		"discharge_cfs": "2130",
+		"height_ft": "7.16"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 09:30",
+		"discharge_cfs": "2320",
+		"height_ft": "7.46"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 09:45",
+		"discharge_cfs": "2560",
+		"height_ft": "7.81"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 10:00",
+		"discharge_cfs": "2700",
+		"height_ft": "8.02"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 10:15",
+		"discharge_cfs": "2850",
+		"height_ft": "8.22"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 10:30",
+		"discharge_cfs": "2990",
+		"height_ft": "8.42"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 10:45",
+		"discharge_cfs": "3140",
+		"height_ft": "8.62"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 11:00",
+		"discharge_cfs": "3320",
+		"height_ft": "8.85"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 11:15",
+		"discharge_cfs": "3500",
+		"height_ft": "9.08"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 11:30",
+		"discharge_cfs": "3620",
+		"height_ft": "9.22"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 11:45",
+		"discharge_cfs": "3720",
+		"height_ft": "9.34"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 12:00",
+		"discharge_cfs": "3740",
+		"height_ft": "9.37"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 12:15",
+		"discharge_cfs": "3820",
+		"height_ft": "9.46"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 12:30",
+		"discharge_cfs": "3900",
+		"height_ft": "9.56"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 12:45",
+		"discharge_cfs": "3990",
+		"height_ft": "9.66"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 13:00",
+		"discharge_cfs": "4020",
+		"height_ft": "9.7"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 13:15",
+		"discharge_cfs": "4080",
+		"height_ft": "9.77"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 13:30",
+		"discharge_cfs": "4130",
+		"height_ft": "9.83"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 13:45",
+		"discharge_cfs": "4120",
+		"height_ft": "9.81"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 14:00",
+		"discharge_cfs": "4100",
+		"height_ft": "9.79"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 14:15",
+		"discharge_cfs": "4060",
+		"height_ft": "9.75"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 14:30",
+		"discharge_cfs": "4130",
+		"height_ft": "9.83"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 14:45",
+		"discharge_cfs": "4270",
+		"height_ft": "9.98"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 15:00",
+		"discharge_cfs": "4260",
+		"height_ft": "9.97"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 15:15",
+		"discharge_cfs": "4230",
+		"height_ft": "9.94"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 15:30",
+		"discharge_cfs": "4170",
+		"height_ft": "9.87"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 15:45",
+		"discharge_cfs": "4210",
+		"height_ft": "9.92"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 16:00",
+		"discharge_cfs": "4350",
+		"height_ft": "10.07"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 16:15",
+		"discharge_cfs": "4310",
+		"height_ft": "10.03"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 16:30",
+		"discharge_cfs": "4280",
+		"height_ft": "10"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 16:45",
+		"discharge_cfs": "4330",
+		"height_ft": "10.05"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 17:00",
+		"discharge_cfs": "4440",
+		"height_ft": "10.17"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 17:15",
+		"discharge_cfs": "4440",
+		"height_ft": "10.17"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 17:30",
+		"discharge_cfs": "4400",
+		"height_ft": "10.13"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 17:45",
+		"discharge_cfs": "4590",
+		"height_ft": "10.34"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 18:15",
+		"discharge_cfs": "4540",
+		"height_ft": "10.28"
+	},
+	{
+		"agency": "USGS",
+		"site_num": "6741510",
+		"date": "2013-09-12 18:30",
+		"discharge_cfs": "4670",
+		"height_ft": "10.43"
+	}
+]
