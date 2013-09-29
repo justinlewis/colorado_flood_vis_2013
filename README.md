@@ -1,6 +1,9 @@
 
 <h3>A Simple Visualization of selected stream measurements during the 2013 Colorado flood created with D3.js and Leaflet.js to show the dramatic increase in river levels.</h3>
 
+</br></br>
+The URL:  <a href="http://justinlewis.github.io/colorado_flood_vis_2013/">http://justinlewis.github.io/colorado_flood_vis_2013</a>
+</br></br>
 
 <b>The Charts:</b></br>
 Charts illustrate stream discharge over time (Sep 9 - 15). Hover over the chart to get more discharge rates, water levels (ft), percent discharge above average, and the exact date/time.
